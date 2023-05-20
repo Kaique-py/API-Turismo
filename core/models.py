@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class PontoTuristico(models.Model):
     nome = models.CharField(max_length=200)
-    descricao = models.TextField()
+    descricao = models.TextField(default='')
     aprovado = models.BooleanField()
 
 def __str__(self):
