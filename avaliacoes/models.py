@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Avaliacao(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
-    nota = models.DecimalField()
+    nota = models.DecimalField(default=1, max_digits=3, decimal_places=2)
     comentario = models.TextField(null=True, blank=True)
     data = models.DateTimeField(auto_now_add=True)
 
