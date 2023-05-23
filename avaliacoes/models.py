@@ -4,7 +4,15 @@ from django.contrib.auth.models import User
 
 class Avaliacao(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
-    avaliacao = models.IntegerField(min_value=1, max_value=5)
+    nota = models.DecimalField()
+    comentario = models.TextField(null=True, blank=True)
     data = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ('data',) #Aqui ordenamos as categorias em ordem alfabética.
+        verbose_name_plural = 'Avaliações' #Aqui eu altero a forma como o Django vai transformar em plural as palavras que eu escrever.
+
+    def __str__(self):
+        return self.usuario.first_name
     
+
