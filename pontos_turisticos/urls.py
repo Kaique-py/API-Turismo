@@ -21,7 +21,7 @@ from core.api.viewsets import PontoTuristicoViewSet
 from django.conf.urls import include
 
 router = routers.DefaultRouter()
-router.register(r'pontoturistico', PontoTuristicoViewSet)
+router.register('pontoturistico', PontoTuristicoViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
