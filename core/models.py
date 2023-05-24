@@ -5,7 +5,7 @@ from avaliacoes.models import Avaliacao
 from endereco.models import Endereco
 
 # Create your models here.
-#Aqui, ao que entendi, criamos os endpoints que queremos ter no site e, para cada um deles, criamos suas características
+#Aqui definimos as características que nossa classe terá (nome, id, etc.)
 
 class PontoTuristico(models.Model):
     nome = models.CharField(max_length=255)
