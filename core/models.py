@@ -15,6 +15,7 @@ class PontoTuristico(models.Model):
     comentarios = models.ManyToManyField(Comentario)
     avaliacao = models.ManyToManyField(Avaliacao)
     endereco = models.ForeignKey(Endereco, on_delete=models.CASCADE, null=True, blank=True)
+    foto = models.ImageField(upload_to='pontos_turisticos', null=True, blank=True)
 
     class Meta:
         ordering = ('nome',) #Aqui ordenamos as categorias em ordem alfabética.
